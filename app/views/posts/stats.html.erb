@@ -1,31 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1>Stats</h1>
+<p>
+  <strong>User with Most Posts:</strong>
+  <%= @most_posts_user %>
+  (<%= @number_of_posts %>)
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Date</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <br><br>
+  <strong>Top 5 Tags:</strong>
+  <% @most_used_tags.each do |tag| %>
+    <%= tag.name %>,
+  <% end %>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.content %></td>
-        <td><%= post.date %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+  <br><br>
+  <strong>Longest blog post:</strong>
+  <%= @longest_blog_post %>
+</p>
