@@ -6,6 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# User.delete_all
+# Comment.delete_all
+# Category.delete_all
+# Tag.delete_all
+# Post.delete_all
+# Tagging.delete_all
+
 @personal = Category.create(name: 'personal')
 @professional = Category.create(name: 'professional')
 @books = Category.create(name: 'books')
@@ -18,7 +25,7 @@
 @jalena = User.create(first_name: 'Jalena', last_name: 'Lee', email: 'jalena.lee@shopify.com')
 @miley = User.create(first_name: 'Miley', last_name: 'Cho', email: 'miley.cho@dogify.com')
 
-@minimalism = Tag.create(name: 'minimalism')
+@moments = Tag.create(name: 'moments')
 @nsfw = Tag.create(name: 'nsfw')
 @memes = Tag.create(name: 'memes')
 @ruby = Tag.create(name: 'ruby')
@@ -27,8 +34,23 @@
 @comp1406 = Post.create(title: 'COMP1406', content: 'This course is a random example.', date: DateTime.now(), user_id: @jalena.id, category_id: @professional.id)
 @theranos = Post.create(title: 'Bad Blood', content: 'This book is a random example.', date: DateTime.now(), user_id: @helen.id, category_id: @books.id)
 @growing = Post.create(title: 'Growing Pains', content: 'This personal learning is a random example.', date: DateTime.now(), user_id: @miley.id, category_id: @personal.id)
+@dogdays = Post.create(title: 'The Dog Days are Over', content: 'This personal learning is a random example.', date: DateTime.now(), user_id: @miley.id, category_id: @random.id)
 @play = Post.create(title: 'Playing Dressup', content: 'This activity is a random example.', date: DateTime.now(), user_id: @gina.id, category_id: @fun.id)
 @munchies = Post.create(title: 'Best Munchies of Ottawa', content: 'This list is a random example.', date: DateTime.now(), user_id: @erin.id, category_id: @random.id)
 
 @comments = Comment.create([{content: 'This comment is related to blah', date: DateTime.now(), user_id: @jalena.id, post_id: @theranos.id}, {content: 'This comment is related to blah', date: DateTime.now(), user_id: @helen.id , post_id: @comp1406.id}, {content: 'This comment is related to blah', date: DateTime.now(), user_id: @gina.id , post_id: @growing.id}, {content: 'This comment is related to blah', date: DateTime.now(), user_id: @miley.id , post_id: @munchies.id}, {content: 'This comment is related to blah', date: DateTime.now(), user_id: @erin.id , post_id: @play.id}])
 
+@theranos.tags.push(@memes, @events)
+@comp1406.tags.push(@nsfw, @ruby)
+@growing.tags.push(@events, @moments)
+@munchies.tags.push(@events)
+@play.tags.push(@nsfw, @moments)
+@dogdays.tags.push(@memes, @events)
+
+# equivalent to .push()
+# @theranos.tags << @memes << @events
+# @comp1406.tags << @nsfw << @ruby
+# @growing.tags << @events << @moments
+# @munchies.tags << @events
+# @play.tags << @nsfw << @moments
+# @dogdays.tags << @memes << @events

@@ -1,8 +1,10 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
-  def stat
-    @posts  = Post.all
+  def stats
+    @posts = Post.all
+    @most_number_of_posts
+    @user_with_most_posts
   end
 
   # GET /posts
