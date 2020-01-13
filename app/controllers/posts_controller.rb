@@ -16,6 +16,14 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @title = @post.title
+    @author_first_name = @post.user.first_name
+    @author_last_name = @post.user.last_name
+    @date = @post.date
+    @content = @post.content
+    @category = @post.category.name
+    @tags = @post.tags
+    @comments = @post.comments
   end
 
   # GET /posts/new

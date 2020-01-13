@@ -30,6 +30,9 @@
 @memes = Tag.create(name: 'memes')
 @ruby = Tag.create(name: 'ruby')
 @events = Tag.create(name: 'events')
+@extrovert = Tag.create(name: 'extrovert')
+@vegan = Tag.create(name: 'vegan')
+@fitness = Tag.create(name: 'fitness')
 
 @comp1406 = Post.create(title: 'COMP1406', content: 'This course is a random example.', date: DateTime.now(), user_id: @jalena.id, category_id: @professional.id)
 @theranos = Post.create(title: 'Bad Blood', content: 'This book is a random example.', date: DateTime.now(), user_id: @helen.id, category_id: @books.id)
@@ -40,7 +43,7 @@
 
 @comments = Comment.create([{content: 'This comment is related to blah', date: DateTime.now(), user_id: @jalena.id, post_id: @theranos.id}, {content: 'This comment is related to blah', date: DateTime.now(), user_id: @helen.id , post_id: @comp1406.id}, {content: 'This comment is related to blah', date: DateTime.now(), user_id: @gina.id , post_id: @growing.id}, {content: 'This comment is related to blah', date: DateTime.now(), user_id: @miley.id , post_id: @munchies.id}, {content: 'This comment is related to blah', date: DateTime.now(), user_id: @erin.id , post_id: @play.id}])
 
-@theranos.tags.push(@memes, @events)
+@theranos.tags.push(@memes, @events, @fitness)
 @comp1406.tags.push(@nsfw, @ruby)
 @growing.tags.push(@events, @moments)
 @munchies.tags.push(@events)
