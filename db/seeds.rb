@@ -24,11 +24,11 @@
 @ruby = Tag.create(name: 'ruby')
 @events = Tag.create(name: 'events')
 
-@comp1406 = Post.create(title: ‘COMP1406’, content: ‘This course is a random example.’, date: DateTime.now(), user_id: @jalena.id, category_id: @professional.id)
-@theranos = Post.create(title: ‘Bad Blood’, content: ‘This book is a random example.’, date: DateTime.now(), user_id: @helen.id, category_id: @books.id)
-@growing = Post.create(title: ‘Growing Pains’, content: ‘This personal learning is a random example.’, date: DateTime.now(), user_id: @miley.id, category_id: @personal.id)
-@play = Post.create(title: ‘Playing Dressup’, content: ‘This activity is a random example.’, date: DateTime.now(), user_id: @gina.id, category_id: @fun.id)
-@munchies = Post.create(title: ‘Best Munchies of Ottawa’, content: ‘This list is a random example.’, date: DateTime.now(), user_id: @erin.id, category_id: @random.id)
+@comp1406 = Post.create(title: 'COMP1406', content: 'This course is a random example.', date: DateTime.now(), user_id: @jalena.id, category_id: @professional.id)
+@theranos = Post.create(title: 'Bad Blood', content: 'This book is a random example.', date: DateTime.now(), user_id: @helen.id, category_id: @books.id)
+@growing = Post.create(title: 'Growing Pains', content: 'This personal learning is a random example.', date: DateTime.now(), user_id: @miley.id, category_id: @personal.id)
+@play = Post.create(title: 'Playing Dressup', content: 'This activity is a random example.', date: DateTime.now(), user_id: @gina.id, category_id: @fun.id)
+@munchies = Post.create(title: 'Best Munchies of Ottawa', content: 'This list is a random example.', date: DateTime.now(), user_id: @erin.id, category_id: @random.id)
 
 @comments = Comment.create([{content: 'This comment is related to blah', date: DateTime.now(), user_id: @jalena.id, post_id: @theranos.id}, {content: 'This comment is related to blah', date: DateTime.now(), user_id: @helen.id , post_id: @comp1406.id}, {content: 'This comment is related to blah', date: DateTime.now(), user_id: @gina.id , post_id: @growing.id}, {content: 'This comment is related to blah', date: DateTime.now(), user_id: @miley.id , post_id: @munchies.id}, {content: 'This comment is related to blah', date: DateTime.now(), user_id: @erin.id , post_id: @play.id}])
 
