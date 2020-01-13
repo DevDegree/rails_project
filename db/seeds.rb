@@ -17,3 +17,20 @@
 @erin = User.create(first_name: 'Erin', last_name: 'Son', email: 'erin.son@shopify.com')
 @jalena = User.create(first_name: 'Jalena', last_name: 'Lee', email: 'jalena.lee@shopify.com')
 @miley = User.create(first_name: 'Miley', last_name: 'Cho', email: 'miley.cho@dogify.com')
+
+@minimalism = Tag.create(name: 'minimalism')
+@nsfw = Tag.create(name: 'nsfw')
+@memes = Tag.create(name: 'memes')
+@ruby = Tag.create(name: 'ruby')
+@events = Tag.create(name: 'events')
+
+@comments = Comment.create()
+
+@comp1406 = Post.create(title: ‘COMP1406’, content: ‘This course is a random example.’, date: DateTime.now, user_id: @jalena.id, category_id: @professional.id)
+@theranos = Post.create(title: ‘Bad Blood’, content: ‘This book is a random example.’, date: DateTime.now, user_id: @helen.id, category_id: @books.id)
+@growing = Post.create(title: ‘Growing Pains’, content: ‘This personal learning is a random example.’, date: DateTime.now, user_id: @miley.id, category_id: @personal.id)
+@play = Post.create(title: ‘Playing Dressup’, content: ‘This activity is a random example.’, date: DateTime.now, user_id: @gina.id, category_id: @fun.id)
+@munchies = Post.create(title: ‘Best Munchies in Ottawa’, content: ‘This list is a random example.’, date: DateTime.now, user_id: @erin.id, category_id: @random.id)
+
+
+
