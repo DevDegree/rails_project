@@ -3,8 +3,10 @@ class PostsController < ApplicationController
 
   def stats
     @posts = Post.all
-    @most_number_of_posts
-    @user_with_most_posts
+    @number_of_posts = Post.group(:user_id).select('*, count(*) AS num').order('num desc').first.num
+    @most_posts_user = Post.group(:user_id).select('*, count(*) AS num').order('num desc').first.user.first_name
+    @most_used_tags = Tag.joins(:taggings).group(:tag_id).select('*, count(*) AS num').order('num desc').limit(5)
+    @longest_blog_post = Post.order('length(content) desc').first.title
   end
 
   # GET /posts
@@ -16,6 +18,14 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @title = @post.title
+    @author_first_name = @post.user.first_name
+    @author_last_name = @post.user.last_name
+    @date = @post.date
+    @content = @post.content
+    @category = @post.category.name
+    @tags = @post.tags
+    @comments = @post.comments
   end
 
   # GET /posts/new
