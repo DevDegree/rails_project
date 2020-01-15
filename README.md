@@ -1,3 +1,5 @@
+# Rails Project
+
 As an homage to the classic DHH (the creator of Rails) 15 minute blog demo (Links to an external site.), for our term project we will be creating our own customized blogs from scratch. To start, we will be creating the basic data structure and will be gradually expanding functionality throughout the next courses. 
 
 Each blog will display a list of posts on it’s home page. Users will be able to click on a post from that list and view a single blog post. Each post will be authored by a user and will have a commenting system available.
