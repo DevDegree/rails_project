@@ -34,7 +34,7 @@
 @vegan = Tag.create(name: 'vegan')
 @fitness = Tag.create(name: 'fitness')
 
-@comp1406 = Post.create(title: 'COMP1406', content: 'This course is a random example.', date: DateTime.now(), user_id: @jalena.id, category_id: @professional.id)
+@comp1406 = Post.create(title: 'COMP3000', content: 'Lorem ipsum dolor amet beard kickstarter lomo, tilde raw denim helvetica tattooed thundercats quinoa subway tile authentic selfies humblebrag chia. Cold-pressed normcore beard, health goth deep v sustainable literally prism blog vinyl meh. Fam four loko tumeric, ennui beard lomo mustache chambray hammock edison bulb bromblebrag narwhal literally helvetica sartorial coloring book, irony hot chicken thundercats. Kogi mustache yr tote bag vegan health goth palo santo scenester vice cliche.m exampndom exais a random example/\A[a-zA-Z]+\z/.', date: DateTime.now(), user_id: @jalena.id, category_id: @professional.id)
 @theranos = Post.create(title: 'Bad Blood', content: 'This book is a random example.', date: DateTime.now(), user_id: @helen.id, category_id: @books.id)
 @growing = Post.create(title: 'Growing Pains', content: 'This personal learning is a random example.', date: DateTime.now(), user_id: @miley.id, category_id: @personal.id)
 @dogdays = Post.create(title: 'The Dog Days are Over', content: 'This personal learning is a random example fdjksaljfdlksafjds.', date: DateTime.now(), user_id: @miley.id, category_id: @random.id)
